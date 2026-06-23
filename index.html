@@ -130,6 +130,7 @@
         </div>
     </section>
 
+    <!-- PHẦN THU THẬP MAIL (ĐÃ ĐƯỢC CẬP NHẬT) -->
     <section id="beta-form" class="max-w-3xl mx-auto px-6 py-24 w-full text-center">
         <div class="glass-card p-10 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 rounded-full mix-blend-multiply filter blur-[64px] opacity-20"></div>
@@ -139,9 +140,30 @@
                 Đăng ký email để nhận thông báo sớm nhất về các bản cập nhật tính năng mới và các đặc quyền dành riêng cho người dùng Beta.
             </p>
             
-            <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto relative z-10">
+            <!-- THAY ĐỔI: Thêm link action của FormSubmit (Thay email_cua_ban@gmail.com bằng mail thật của bạn) -->
+            <form action="https://formsubmit.co/anhtuan.09st@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto relative z-10">
+                
+                <!-- Cấu hình ẩn của FormSubmit để tối ưu trải nghiệm -->
+                <input type="hidden" name="_captcha" value="false"> <!-- Tắt reCAPTCHA để người dùng gửi nhanh hơn -->
+                <input type="hidden" name="_next" value="https://formsubmit.co/thanks"> <!-- Trang hiển thị sau khi gửi thành công -->
+                <input type="hidden" name="_subject" value="Đăng ký mới từ Syncro Life Beta!"> <!-- Tiêu đề email bạn nhận được -->
+
                 <input 
                     type="email" 
+                    name="email"
                     placeholder="Nhập địa chỉ email của bạn..." 
                     required
-                    class="flex-grow px-5 py-3 rounded-xl bg-gray-900/50 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-electric
+                    class="flex-grow px-5 py-3 rounded-xl bg-gray-900/50 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-electric-blue transition-colors text-sm"
+                >
+                <button 
+                    type="submit" 
+                    class="px-6 py-3 rounded-xl bg-electric-blue hover:bg-blue-600 font-semibold text-white transition-all text-sm whitespace-nowrap shadow-md glow-blue flex items-center justify-center gap-2"
+                >
+                    <i class="fa-solid fa-paper-plane text-xs"></i> Đăng ký liền
+                </button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
